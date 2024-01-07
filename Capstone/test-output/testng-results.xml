@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-05T16:04:27 IST" name="Stepdefinitions" finished-at="2024-01-05T16:04:28 IST" duration-ms="1299">
+  <suite started-at="2024-01-08T00:25:52 IST" name="Stepdefinitions" finished-at="2024-01-08T00:25:54 IST" duration-ms="1567">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.runner@74ea2410]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.runner@534a5a98]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-01-05T16:04:27 IST" name="Stepdefinition" finished-at="2024-01-05T16:04:28 IST" duration-ms="1299">
+    <test started-at="2024-01-08T00:25:52 IST" name="Stepdefinition" finished-at="2024-01-08T00:25:54 IST" duration-ms="1567">
       <class name="testrunner.runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.runner@74ea2410]" started-at="2024-01-05T16:04:27 IST" name="setUpClass" finished-at="2024-01-05T16:04:27 IST" duration-ms="371" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.runner@534a5a98]" started-at="2024-01-08T00:25:53 IST" name="setUpClass" finished-at="2024-01-08T00:25:53 IST" duration-ms="667" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@64b31700]]>
+                <![CDATA[org.testng.TestRunner@33c2bd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.runner@74ea2410]" started-at="2024-01-05T16:04:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-01-05T16:04:28 IST" duration-ms="211" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.runner@534a5a98]" started-at="2024-01-08T00:25:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-01-08T00:25:53 IST" duration-ms="228" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -30,17 +30,17 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Verify image carousel]"]]>
+                <![CDATA["Optional[Verify image in WebDriver University]"]]>
               </value>
             </param>
           </params>
           <exception class="io.cucumber.testng.UndefinedStepException">
             <message>
-              <![CDATA[The step 'I open the URL "http://webdriveruniversity.com/index.html"' and 5 other step(s) are undefined.
+              <![CDATA[The step 'I am on the "http://webdriveruniversity.com/index.html" page' and 5 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given("I open the URL {string}")
-public void i_open_the_url(String string) {
+@Given("I am on the {string} page")
+public void i_am_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -49,34 +49,34 @@ public void i_click_on_the_link(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When("I switch to the new tab")
-public void i_switch_to_the_new_tab() {
+@Then("I should be on the {string} page")
+public void i_should_be_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I verify that the image is present")
-public void i_verify_that_the_image_is_present() {
+@Then("I should see the image carousel")
+public void i_should_see_the_image_carousel() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I click on the right arrow button")
+@When("I click on the right arrow button")
 public void i_click_on_the_right_arrow_button() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I verify that the images are changing accordingly")
-public void i_verify_that_the_images_are_changing_accordingly() {
+@Then("the image should change")
+public void the_image_should_change() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
 ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'I open the URL "http://webdriveruniversity.com/index.html"' and 5 other step(s) are undefined.
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'I am on the "http://webdriveruniversity.com/index.html" page' and 5 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given("I open the URL {string}")
-public void i_open_the_url(String string) {
+@Given("I am on the {string} page")
+public void i_am_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -85,23 +85,23 @@ public void i_click_on_the_link(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When("I switch to the new tab")
-public void i_switch_to_the_new_tab() {
+@Then("I should be on the {string} page")
+public void i_should_be_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I verify that the image is present")
-public void i_verify_that_the_image_is_present() {
+@Then("I should see the image carousel")
+public void i_should_see_the_image_carousel() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I click on the right arrow button")
+@When("I click on the right arrow button")
 public void i_click_on_the_right_arrow_button() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I verify that the images are changing accordingly")
-public void i_verify_that_the_images_are_changing_accordingly() {
+@Then("the image should change")
+public void the_image_should_change() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -118,27 +118,27 @@ at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
@@ -148,7 +148,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.runner@74ea2410]" started-at="2024-01-05T16:04:28 IST" name="tearDownClass" finished-at="2024-01-05T16:04:28 IST" duration-ms="581" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.runner@534a5a98]" started-at="2024-01-08T00:25:53 IST" name="tearDownClass" finished-at="2024-01-08T00:25:54 IST" duration-ms="590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

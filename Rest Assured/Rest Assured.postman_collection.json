@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "5233a34b-4df0-4736-ab7d-2228143b00dc",
+		"name": "Rest Assured",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31988540",
+		"_collection_link": "https://www.postman.com/lively-robot-659631/workspace/my-workspace/collection/31988540-5233a34b-4df0-4736-ab7d-2228143b00dc?action=share&source=collection_link&creator=31988540"
+	},
+	"item": [
+		{
+			"name": "New Request Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							"// Import the 'xlsx' library to read data from Excel sheets\r",
+							"const XLSX = require('xlsx');\r",
+							"\r",
+							"// Define the path to the Excel file\r",
+							"const filePath = 'C:Users/Shravani and Ankita/Postman/files/file.xlsx';\r",
+							"\r",
+							"// Define the name of the sheet containing the email and password data\r",
+							"const sheetName = 'Sheet1';\r",
+							"\r",
+							"// Load the workbook\r",
+							"const workbook = XLSX.readFile(filePath);\r",
+							"\r",
+							"// Get the sheet data as an array of objects\r",
+							"const sheetData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);\r",
+							"\r",
+							"// Define the URL for the API request\r",
+							"const url = 'https://reqres.in/api/register';\r",
+							"\r",
+							"// Define the request body\r",
+							"const requestBody = {\r",
+							"    email: sheetData[0].email,\r",
+							"    password: sheetData[0].password\r",
+							"};"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"//  request options\r",
+							"const requestOptions = {\r",
+							"    method: 'POST',\r",
+							"    header: {\r",
+							"        'Content-Type': 'application/json'\r",
+							"    },\r",
+							"    body: JSON.stringify(requestBody)\r",
+							"};\r",
+							"\r",
+							"// Send API request\r",
+							"pm.sendRequest(url, function (err, response) {\r",
+							"    // Check for errors\r",
+							"    if (err) {\r",
+							"        console.log(err);\r",
+							"        return;\r",
+							"    }\r",
+							"\r",
+							"    // Parse the response body\r",
+							"    const responseBody = JSON.parse(response.body);\r",
+							"\r",
+							"    // Assert that the id is an integer\r",
+							"    pm.test('Id is an integer', function () {\r",
+							"        pm.expect(responseBody.id).to.be.a('number');\r",
+							"    });\r",
+							"\r",
+							"    // Assert that the token is a string\r",
+							"    pm.test('Token is a string', function () {\r",
+							"        pm.expect(responseBody.token).to.be.a('string');\r",
+							"    });\r",
+							"\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/register",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

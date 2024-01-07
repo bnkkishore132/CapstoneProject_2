@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 05 16:04:27 IST 2024</td>
+<td>Started on:</td><td>Mon Jan 08 00:25:52 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1299 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1567 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -70,18 +70,17 @@ function toggleAllBoxes() {
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunner.runner.runScenario()'><b>runScenario</b><br>Test class: testrunner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify image functionality", "Optional[Verify image carousel]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I open the URL &quot;http://webdriveruniversity.com/index.html&quot;&apos; and 5 other step(s) are undefined.
+<td title='testrunner.runner.runScenario()'><b>runScenario</b><br>Test class: testrunner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify image functionality", "Optional[Verify image in WebDriver University]"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I am on the &quot;http://webdriveruniversity.com/index.html&quot; page&apos; and 5 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given(&quot;I open the URL {string}&quot;)
-public void i_open_the_url(String string) {
+@Given(&quot;I am on the {string} page&quot;)
+public void i_am_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -90,23 +89,23 @@ public void i_click_on_the_link(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When(&quot;I switch to the new tab&quot;)
-public void i_switch_to_the_new_tab() {
+@Then(&quot;I should be on the {string} page&quot;)
+public void i_should_be_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then(&quot;I verify that the image is present&quot;)
-public void i_verify_that_the_image_is_present() {
+@Then(&quot;I should see the image carousel&quot;)
+public void i_should_see_the_image_carousel() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then(&quot;I click on the right arrow button&quot;)
+@When(&quot;I click on the right arrow button&quot;)
 public void i_click_on_the_right_arrow_button() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then(&quot;I verify that the images are changing accordingly&quot;)
-public void i_verify_that_the_images_are_changing_accordingly() {
+@Then(&quot;the image should change&quot;)
+public void the_image_should_change() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -120,12 +119,12 @@ public void i_verify_that_the_images_are_changing_accordingly() {
 	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
 	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace169880779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace169880779'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I open the URL &quot;http://webdriveruniversity.com/index.html&quot;&apos; and 5 other step(s) are undefined.
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace440736059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace440736059'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I am on the &quot;http://webdriveruniversity.com/index.html&quot; page&apos; and 5 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given(&quot;I open the URL {string}&quot;)
-public void i_open_the_url(String string) {
+@Given(&quot;I am on the {string} page&quot;)
+public void i_am_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -134,23 +133,23 @@ public void i_click_on_the_link(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When(&quot;I switch to the new tab&quot;)
-public void i_switch_to_the_new_tab() {
+@Then(&quot;I should be on the {string} page&quot;)
+public void i_should_be_on_the_page(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then(&quot;I verify that the image is present&quot;)
-public void i_verify_that_the_image_is_present() {
+@Then(&quot;I should see the image carousel&quot;)
+public void i_should_see_the_image_carousel() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then(&quot;I click on the right arrow button&quot;)
+@When(&quot;I click on the right arrow button&quot;)
 public void i_click_on_the_right_arrow_button() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then(&quot;I verify that the images are changing accordingly&quot;)
-public void i_verify_that_the_images_are_changing_accordingly() {
+@Then(&quot;the image should change&quot;)
+public void the_image_should_change() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -167,33 +166,33 @@ public void i_verify_that_the_images_are_changing_accordingly() {
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>testrunner.runner@74ea2410</td></tr>
+<td>testrunner.runner@534a5a98</td></tr>
 </table><p>
 </body>
 </html>

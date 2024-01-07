@@ -1,24 +1,22 @@
 package StepDefinitions;
-
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import browser.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Stepdefinition {
-    private WebDriver driver;
-
-    @Given("I open the URL {string}")
-    public void i_open_the_url(String url) {
-        System.setProperty("webdriver.chrome.driver", "./Drivers.chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get(url);
+public class Stepdefinition extends BaseClass{
+    
+	BaseClass bc = new BaseClass();
+    
+	@Given("")
+	@Given("I am on the {string} page")
+    public void i_am_on_the_page(String url) {
+        
+        bc.setUp();
     }
 
     @When("I click on the {string} link")
@@ -27,34 +25,33 @@ public class Stepdefinition {
         link.click();
     }
 
-    @When("I switch to the new tab")
-    public void i_switch_to_the_new_tab() {
-        String currentWindowHandle = driver.getWindowHandle();
-        for (String windowHandle : driver.getWindowHandles()) {
-            if (!windowHandle.equals(currentWindowHandle)) {
-                driver.switchTo().window(windowHandle);
-                break;
-            }
-        }
+    @Then("I should be on the {string} page")
+    public void i_should_be_on_the_page(String url) {
+        Assert.assertEquals(driver.getCurrentUrl(), url);
     }
 
-    @Then("I verify that the image is present")
-    public void i_verify_that_the_image_is_present() {
-        WebElement image = driver.findElement(By.cssSelector(".carousel-inner .item.active img"));
-        Assert.assertTrue(image.isDisplayed());
+    @Then("I should see the image carousel")
+    public void i_should_see_the_image_carousel() {
+        WebElement carousel = driver.findElement(By.id("carousel-example-generic"));
+        Assert.assertTrue(carousel.isDisplayed());
     }
 
-    @Then("I click on the right arrow button")
+    @When("I click on the right arrow button")
     public void i_click_on_the_right_arrow_button() {
-        WebElement rightArrowButton = driver.findElement(By.cssSelector(".carousel-control.right"));
-        rightArrowButton.click();
+        WebElement rightArrow = driver.findElement(By.className("right"));
+        rightArrow.click();
     }
 
-    @Then("I verify that the images are changing accordingly")
-    public void i_verify_that_the_images_are_changing_accordingly() throws InterruptedException {
-        WebElement firstImage = driver.findElement(By.cssSelector(".carousel-inner .item.active img"));
-        Thread.sleep(2000);
-        WebElement secondImage = driver.findElement(By.cssSelector(".carousel-inner .item.active img"));
-        Assert.assertNotEquals(firstImage.getAttribute("src"), secondImage.getAttribute("src"));
+    @Then("the image should change")
+    public void the_image_should_change() {
+        WebElement image = driver.findElement(By.xpath("//div[@class='item active']/img"));
+        String src1 = image.getAttribute("src");
+        WebElement rightArrow = driver.findElement(By.className("right"));
+        rightArrow.click();
+        image = driver.findElement(By.xpath("//div[@class='item active']/img"));
+        String src2 = image.getAttribute("src");
+        Assert.assertNotEquals(src1, src2);
     }
+   
+    
 }
