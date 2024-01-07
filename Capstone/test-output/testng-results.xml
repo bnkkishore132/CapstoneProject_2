@@ -2,45 +2,45 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-08T00:25:52 IST" name="Stepdefinitions" finished-at="2024-01-08T00:25:54 IST" duration-ms="1567">
+  <suite started-at="2024-01-08T01:50:59 IST" name="Capstone Project Suite" finished-at="2024-01-08T01:51:00 IST" duration-ms="676">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.runner@534a5a98]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@534a5a98]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-01-08T00:25:52 IST" name="Stepdefinition" finished-at="2024-01-08T00:25:54 IST" duration-ms="1567">
-      <class name="testrunner.runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.runner@534a5a98]" started-at="2024-01-08T00:25:53 IST" name="setUpClass" finished-at="2024-01-08T00:25:53 IST" duration-ms="667" status="PASS">
+    <test started-at="2024-01-08T01:50:59 IST" name="Image Verification Test" finished-at="2024-01-08T01:51:00 IST" duration-ms="676">
+      <class name="runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@534a5a98]" started-at="2024-01-08T01:50:59 IST" name="setUpClass" finished-at="2024-01-08T01:51:00 IST" duration-ms="420" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@33c2bd]]>
+                <![CDATA[org.testng.TestRunner@3f792b9b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.runner@534a5a98]" started-at="2024-01-08T00:25:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-01-08T00:25:53 IST" duration-ms="228" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@534a5a98]" started-at="2024-01-08T01:51:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-01-08T01:51:00 IST" duration-ms="175" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify image functionality"]]>
+                <![CDATA["Verify image change in iframe"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Verify image in WebDriver University]"]]>
+                <![CDATA["Optional[Image Verification]"]]>
               </value>
             </param>
           </params>
           <exception class="io.cucumber.testng.UndefinedStepException">
             <message>
-              <![CDATA[The step 'I am on the "http://webdriveruniversity.com/index.html" page' and 5 other step(s) are undefined.
+              <![CDATA[The step 'I launch the website "http://webdriveruniversity.com/index.html"' and 5 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given("I am on the {string} page")
-public void i_am_on_the_page(String string) {
+@Given("I launch the website {string}")
+public void i_launch_the_website(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -49,34 +49,34 @@ public void i_click_on_the_link(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I should be on the {string} page")
-public void i_should_be_on_the_page(String string) {
+@When("I switch to the new tab")
+public void i_switch_to_the_new_tab() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I should see the image carousel")
-public void i_should_see_the_image_carousel() {
+@Then("I verify that the image is present")
+public void i_verify_that_the_image_is_present() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When("I click on the right arrow button")
+@Then("I click on the right arrow button")
 public void i_click_on_the_right_arrow_button() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("the image should change")
-public void the_image_should_change() {
+@Then("I verify that the image has changed")
+public void i_verify_that_the_image_has_changed() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
 ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'I am on the "http://webdriveruniversity.com/index.html" page' and 5 other step(s) are undefined.
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'I launch the website "http://webdriveruniversity.com/index.html"' and 5 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given("I am on the {string} page")
-public void i_am_on_the_page(String string) {
+@Given("I launch the website {string}")
+public void i_launch_the_website(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -85,23 +85,23 @@ public void i_click_on_the_link(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I should be on the {string} page")
-public void i_should_be_on_the_page(String string) {
+@When("I switch to the new tab")
+public void i_switch_to_the_new_tab() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("I should see the image carousel")
-public void i_should_see_the_image_carousel() {
+@Then("I verify that the image is present")
+public void i_verify_that_the_image_is_present() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When("I click on the right arrow button")
+@Then("I click on the right arrow button")
 public void i_click_on_the_right_arrow_button() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then("the image should change")
-public void the_image_should_change() {
+@Then("I verify that the image has changed")
+public void i_verify_that_the_image_has_changed() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -148,11 +148,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.runner@534a5a98]" started-at="2024-01-08T00:25:53 IST" name="tearDownClass" finished-at="2024-01-08T00:25:54 IST" duration-ms="590" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@534a5a98]" started-at="2024-01-08T01:51:00 IST" name="tearDownClass" finished-at="2024-01-08T01:51:00 IST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- testrunner.runner -->
-    </test> <!-- Stepdefinition -->
-  </suite> <!-- Stepdefinitions -->
+      </class> <!-- runners.TestRunner -->
+    </test> <!-- Image Verification Test -->
+  </suite> <!-- Capstone Project Suite -->
 </testng-results>
