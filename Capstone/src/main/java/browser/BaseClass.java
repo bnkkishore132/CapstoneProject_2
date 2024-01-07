@@ -1,18 +1,21 @@
 package browser;
-
-import java.util.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 public class BaseClass {
+    protected WebDriver driver;
 
-	
-	WebDriver driver = new ChromeDriver();
-	ChromeOptions options = new ChromeOptions();
-	System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
-	
-	
-	
-	
+    @BeforeClass
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Krishna Kishore\\CapstoneProject_2\\Capstone\\Drivers\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
+
+    @AfterClass
+    public void tearDown() {
+        driver.quit();
+    }
 }
