@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Stepdefinitions">
-    <test name="Stepdefinition">
+<suite name="Capstone Project Suite">
+    <test name="Image Verification Test">
         <classes>
-            <class name="testrunner.runner"/>
+            <class name="runners.TestRunner"/>
         </classes>
     </test>
 </suite>

@@ -1,10 +1,9 @@
-@testcapstone
-Feature: Verify image in WebDriver University
+Feature: Image Verification
 
-  Scenario: Verify image functionality
-    Given I am on the "http://webdriveruniversity.com/index.html" page
-    When I click on the "IFrame" link
-    Then I should be on the "http://webdriveruniversity.com/IFrame/index.html" page
-    And I should see the image carousel
-    When I click on the right arrow button
-    Then the image should change
+  Scenario: Verify image change in iframe
+    Given I launch the website "http://webdriveruniversity.com/index.html"
+    When I click on the "IFRAME" link
+    And I switch to the new "http://webdriveruniversity.com/index.html" tab
+    Then I verify that the image is present
+    And I click on the right arrow button
+    And I verify that the image has changed

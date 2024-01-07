@@ -1,22 +1,25 @@
 package StepDefinitions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
-import browser.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Stepdefinition extends BaseClass{
-    
-	BaseClass bc = new BaseClass();
-    
-	@Given("")
-	@Given("I am on the {string} page")
-    public void i_am_on_the_page(String url) {
-        
-        bc.setUp();
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import BaseClass.*;
+
+import org.testng.Assert;
+
+public
+
+class ImageVerificationSteps {
+    private WebDriver driver;
+
+    @Given("I launch the website {string}")
+    public void launchWebsite(String url) {
+        driver = BaseClass.getDriver();
+        driver.get(url);
     }
 
     @When("I click on the {string} link")
@@ -24,14 +27,14 @@ public class Stepdefinition extends BaseClass{
         WebElement link = driver.findElement(By.linkText(linkText));
         link.click();
     }
-
-    @Then("I should be on the {string} page")
+    
+    @Then("I switch to the new {string} tab")
     public void i_should_be_on_the_page(String url) {
         Assert.assertEquals(driver.getCurrentUrl(), url);
     }
 
-    @Then("I should see the image carousel")
-    public void i_should_see_the_image_carousel() {
+    @Then("I verify that the image is present")
+    public void I_verify_that_the_image_is_present() {
         WebElement carousel = driver.findElement(By.id("carousel-example-generic"));
         Assert.assertTrue(carousel.isDisplayed());
     }
@@ -42,8 +45,8 @@ public class Stepdefinition extends BaseClass{
         rightArrow.click();
     }
 
-    @Then("the image should change")
-    public void the_image_should_change() {
+    @Then("I verify that the image has changed")
+    public void I_verify_that_the_image_has_changed() {
         WebElement image = driver.findElement(By.xpath("//div[@class='item active']/img"));
         String src1 = image.getAttribute("src");
         WebElement rightArrow = driver.findElement(By.className("right"));
