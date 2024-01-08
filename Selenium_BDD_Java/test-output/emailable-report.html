@@ -9,9 +9,9 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Capstone Project Suite</th></tr>
-<tr><td><a href="#t0">Image Verification Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">676</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Image Verification Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">856</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Capstone Project Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Image Verification Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runners.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1704658860241</td><td rowspan="1">175</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Capstone Project Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Image Verification Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runners.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1704659325133</td><td rowspan="1">289</td></tr></tbody>
 </table>
 <h2>Image Verification Test</h2><h3 id="m0">runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify image change in iframe&quot;</td><td>&quot;Optional[Image Verification]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;I launch the website &quot;http://webdriveruniversity.com/index.html&quot;&apos; and 5 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
@@ -26,8 +26,8 @@ public void i_click_on_the_link(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When(&quot;I switch to the new tab&quot;)
-public void i_switch_to_the_new_tab() {
+@When(&quot;I switch to the new {string} tab&quot;)
+public void i_switch_to_the_new_tab(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
